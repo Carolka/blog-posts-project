@@ -7,6 +7,7 @@ function Post(props) {
       <div className="content">
         <div className="title"> {props.title}</div>
         <p className="text">{props.text}</p>
+        <button>Edit</button>
       </div>
     </div>
   );
