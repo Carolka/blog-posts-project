@@ -1,0 +1,37 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: center;
+  justify-items: center;
+  gap: 30px 50px;
+}
+
+.post {
+  width: 100%;
+  background-color: rgb(239, 238, 238);
+  border: solid rgb(203, 206, 210) 1px;
+}
+
+.picture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.content {
+  padding: 25px;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.text {
+  font-size: 1rem;
+}
