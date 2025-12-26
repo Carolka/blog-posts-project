@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import { nanoid } from "nanoid";
 import Post from "./Post";
 import Nav from "./Nav";
@@ -14,12 +15,16 @@ export function App() {
     },
   });
 
-  const posts = [
+  const [posts, setPosts] = useState([
     { id: nanoid(), title: "Post 1 Headline", text: "Lorem ipsum lalalalala" },
     { id: nanoid(), title: "Post 2 Headline", text: "Lorem ipsum lalalalala" },
     { id: nanoid(), title: "Post 3 Headline", text: "Lorem ipsum lalalalala" },
     { id: nanoid(), title: "Post 4 Headline", text: "Lorem ipsum lalalalala" },
-  ];
+  ]);
+
+  function addNewPost(newPost) {
+    setPosts((prevPosts) => [newPost, ...prevPosts]);
+  }
 
   return (
     <Router>
@@ -35,7 +40,7 @@ export function App() {
             </div>
           }
         />
-        <Route path="/add-post" element={<AddPost />} />
+        <Route path="/add-post" element={<AddPost click={addNewPost} />} />
       </Routes>
 
       {/* <div>{JSON.stringify(data)}</div> */}
