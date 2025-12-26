@@ -2,31 +2,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-nav {
-  position: relative;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  height: 60px;
-  background-color: lightgray;
-}
-
-nav a,
-nav h3 {
-  color: rgb(78, 81, 83);
-  text-decoration: none;
-  padding: 20px;
-}
-
-nav h3 {
-  margin: 0;
-}
-
-nav a:hover {
-  background-color: grey;
-  color: white;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(3, 30%);
@@ -34,44 +9,4 @@ nav a:hover {
   justify-items: center;
   margin-top: 50px;
   gap: 30px 50px;
-}
-
-.post {
-  width: 100%;
-  background-color: rgb(239, 238, 238);
-  border: solid rgb(203, 206, 210) 1px;
-}
-
-.picture img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.content {
-  padding: 25px;
-}
-
-.content button {
-  padding: 5px 20px;
-  display: block;
-  margin: 0 auto;
-  border: solid rgb(203, 206, 210) 1px;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.content button:hover {
-  background-color: #04aa6d;
-  color: white;
-}
-
-.title {
-  font-weight: 800;
-  font-size: 1.5rem;
-}
-
-.text {
-  font-size: 1rem;
 }

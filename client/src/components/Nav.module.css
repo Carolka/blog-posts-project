@@ -1,0 +1,26 @@
+.navi {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 60px;
+  background-color: lightgray;
+}
+
+.link {
+  color: rgb(78, 81, 83);
+  text-decoration: none;
+  padding: 20px;
+}
+
+.page {
+  color: rgb(78, 81, 83);
+  text-decoration: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.link:hover {
+  background-color: grey;
+  color: white;
+}

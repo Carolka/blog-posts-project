@@ -1,0 +1,39 @@
+.post {
+  width: 100%;
+  background-color: rgb(239, 238, 238);
+  border: solid rgb(203, 206, 210) 1px;
+}
+
+.picture > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.content {
+  padding: 25px;
+}
+
+.content > button {
+  padding: 5px 20px;
+  display: block;
+  margin: 0 auto;
+  border: solid rgb(203, 206, 210) 1px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.content > button:hover {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.text {
+  font-size: 1rem;
+}

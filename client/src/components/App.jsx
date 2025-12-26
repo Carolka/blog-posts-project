@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import Post from "./Post";
+import Nav from "./Nav";
 
 export function App() {
   const { data = { baz: "astral" } } = useQuery({
@@ -19,11 +20,7 @@ export function App() {
 
   return (
     <div>
-      <nav>
-        <h3>Simple Blog Project</h3>
-        <a href="#">View All Posts</a>
-        <a href="#">Add Post</a>
-      </nav>
+      <Nav></Nav>
       <div className="container">
         {posts.map((post) => (
           <Post key={post.id} title={post.title} text={post.text} />
