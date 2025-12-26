@@ -1,15 +1,16 @@
 import styles from "./Nav.module.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <div className={styles.navi}>
-      <h3 className={styles.page}>Simple Blog Project</h3>
-      <a href="#" className={styles.link}>
+    <div className={styles.bar}>
+      <h3 className={styles.pageName}>Simple Blog Project</h3>
+      <Link to="/" className={styles.link}>
         View All Posts
-      </a>
-      <a href="#" className={styles.link}>
+      </Link>
+      <Link to="/add-post" className={styles.link}>
         Add Post
-      </a>
+      </Link>
     </div>
   );
 }

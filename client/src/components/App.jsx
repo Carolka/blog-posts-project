@@ -1,6 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { nanoid } from "nanoid";
 import Post from "./Post";
 import Nav from "./Nav";
+import AddPost from "./AddPost";
 
 export function App() {
   const { data = { baz: "astral" } } = useQuery({
@@ -12,21 +15,30 @@ export function App() {
   });
 
   const posts = [
-    { id: 1, title: "Post 1 Headline", text: "Lorem ipsum lalalalala" },
-    { id: 2, title: "Post 2 Headline", text: "Lorem ipsum lalalalala" },
-    { id: 3, title: "Post 3 Headline", text: "Lorem ipsum lalalalala" },
-    { id: 4, title: "Post 4 Headline", text: "Lorem ipsum lalalalala" },
+    { id: nanoid(), title: "Post 1 Headline", text: "Lorem ipsum lalalalala" },
+    { id: nanoid(), title: "Post 2 Headline", text: "Lorem ipsum lalalalala" },
+    { id: nanoid(), title: "Post 3 Headline", text: "Lorem ipsum lalalalala" },
+    { id: nanoid(), title: "Post 4 Headline", text: "Lorem ipsum lalalalala" },
   ];
 
   return (
-    <div>
+    <Router>
       <Nav></Nav>
-      <div className="container">
-        {posts.map((post) => (
-          <Post key={post.id} title={post.title} text={post.text} />
-        ))}
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="container">
+              {posts.map((post) => (
+                <Post key={post.id} title={post.title} text={post.text} />
+              ))}
+            </div>
+          }
+        />
+        <Route path="/add-post" element={<AddPost />} />
+      </Routes>
+
       {/* <div>{JSON.stringify(data)}</div> */}
-    </div>
+    </Router>
   );
 }

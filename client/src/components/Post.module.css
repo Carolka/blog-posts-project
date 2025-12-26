@@ -4,7 +4,7 @@
   border: solid rgb(203, 206, 210) 1px;
 }
 
-.picture > img {
+.picture {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -15,16 +15,21 @@
   padding: 25px;
 }
 
-.content > button {
-  padding: 5px 20px;
-  display: block;
-  margin: 0 auto;
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  padding: 5px;
+  margin: 10px auto;
   border: solid rgb(203, 206, 210) 1px;
   border-radius: 5px;
   font-size: 1rem;
+  width: 40%;
 }
 
-.content > button:hover {
+.button:hover {
   background-color: #04aa6d;
   color: white;
 }
