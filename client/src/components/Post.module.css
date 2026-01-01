@@ -20,7 +20,8 @@
   justify-content: space-around;
 }
 
-.button {
+.button,
+.edit {
   padding: 5px;
   margin: 10px auto;
   border: solid rgb(203, 206, 210) 1px;
@@ -29,7 +30,16 @@
   width: 40%;
 }
 
-.button:hover {
+.edit {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.button:hover,
+.edit:hover {
   background-color: #04aa6d;
   color: white;
 }

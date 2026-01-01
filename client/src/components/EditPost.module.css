@@ -1,0 +1,41 @@
+.container {
+  border: solid lightgrey 1px;
+  background-color: rgb(237, 240, 240);
+  margin-top: 50px;
+  padding: 15px;
+  width: 40%;
+  justify-self: center;
+}
+
+.form {
+  display: grid;
+  row-gap: 15px;
+  grid-template-rows: 30px 200px 30px;
+}
+
+.container > h3 {
+  color: rgb(78, 81, 83);
+}
+
+.button {
+  justify-self: center;
+  width: 100px;
+}
+
+.button:hover {
+  color: grey;
+}
+
+.content {
+  vertical-align: top;
+  line-height: 1.5;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #888;
+}

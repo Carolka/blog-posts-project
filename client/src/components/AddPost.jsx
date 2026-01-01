@@ -36,7 +36,7 @@ function AddPost({ click }) {
           className={styles.content}
         />
 
-        <input type="submit" value="AddPost" className={styles.button} />
+        <input type="submit" value="Add Post" className={styles.button} />
       </form>
     </div>
   );
